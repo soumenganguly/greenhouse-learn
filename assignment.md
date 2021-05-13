@@ -49,7 +49,7 @@ The solution will be assessed on the following criteria:
 
 ## Additional information and assumptions
 
-- The required data can be found through this link: `<insert public link to GDrive>`
+- The required data can be found through this link: https://drive.google.com/drive/folders/1USB4dOK9UodNt1mPiLf8-jE0TkuS94-f?usp=sharing
 - Please refer to the ReadMe.pdf file in the data folder. You can assume that _“Weather data”_ and _“Climate and irrigation setpoints”_ are available at `t>0`, data from other datasets is available at `t<=0`.
 - In the data folder you will find six subfolders. The names of these folders represent teams that competed in the Wageningen Autonomous Greenhouse Challenge. Each team was given the assignment to grow tomatoes in a small greenhouse that could be controlled remotely. The data in each team folder describes the results of that particular team.
 
