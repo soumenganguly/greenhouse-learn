@@ -13,7 +13,7 @@ For the assignment, you are expected to develop a time series model that can pre
 
 Your solution should include the following components:
 
-1. A model that can predict air temperature (_T<sub>air</sub>_) 24 hours in advance, with a 1 hour timestep (i.e. assuming the current time is `t=0`, predict the air temperature for `t=1` to `t=24`, with 1 hour increments)
+1. A model that can predict air temperature (_T<sub>air</sub>_) up to 24 hours in advance, with 1 hour timesteps (i.e. assuming the current time is `t=0`, predict the air temperature for `t=1` to `t=24`, with 1 hour increments)
 2. Include a confidence interval to your predictions at P10 and P90
 3. Visualize your results
 4. _Optional_: extend your model to include predictions on relative humidity (_RH<sub>air</sub>_)
@@ -21,7 +21,7 @@ Your solution should include the following components:
 ### Non-functional requirements
 
 - Use Python 3.6 or higher
-- The assignment should nog take more than 6-8 hours to complete. It's up to you if you spend less or more time on it
+- This assignment was designed to be completed in 6-8h. The evaluation will take into account the choices you make and what you focus on given the time you have. However, it's up to you if you spend less or more time on it.
 - Please make sure the final commit to your repository is done at least 24 hours before the start of your interview
 
 ## Deliverables
@@ -29,7 +29,7 @@ Your solution should include the following components:
 This assignment should be delivered in the following way:
 
 - All code is pushed to your private copy of this repository.
-- Documentation is provided in the README.md on how the model works, and how to run and test it.
+- Documentation is provided in the README.md on how the model works, which performance is expected, how to run and how to test it on new data.
 - Any information, (dummy)-data, files, and other assets that are needed to run this model, are provided in this repository.
 
 ## Assessment Criteria
@@ -46,6 +46,8 @@ The solution will be assessed on the following criteria:
 - What models did you try, how did you validate them, how did you select your final one?
 - How well do you know the model, why should it work?
 - Can you walk us through your choices and method?
+- Can you clearly and concisely describe the modelling process you have followed and the choices you have made?
+- Can you describe the biggest short-comings of your model and which steps could be taken to improve on that?
 
 ## Additional information and assumptions
 
