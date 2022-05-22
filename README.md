@@ -47,7 +47,7 @@ We make a prediction with 88% accuracy at \[P10,P90\] on Air temperature for the
 
         >> X_train, Y_train, X_test, Y_test = train_test_split(final_df, predict_on='Tair')
         >> model = GreenHousePredictor()
-        >> model.train(X_train, Y_train
+        >> model.train(X_train, Y_train)
     ```
 
 - ## Test on a new dataset
