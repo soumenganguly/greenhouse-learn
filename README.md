@@ -33,49 +33,36 @@ We make a prediction with 88% accuracy at \[P10,P90\] on Air temperature for the
     
     From your python prompt run:
 
-    `>> from ghlearn.preprocessing import load_data, preprocess, transform`
+    ```shell
+        >> from ghlearn.preprocessing import load_data, preprocess, transform
+        >> from ghlearn.model_selection import train_test_split
+        >> from ghlearn.model import GreenHousePredictor
 
-    `>> from ghlearn.model_selection import train_test_split`
+        >> weather_df = load_data(path_to_weather_file)
+        >> ghclimate_df = load_data(path_to_ghclimate_file)
 
-    `>> from ghlearn.model import GreenHousePredictor`
+        >> weather_df = preprocess(weather_df)
+        >> ghclimate_df = preprocess(ghclimate_df)
+        >> final_df = transform(weather_df, ghclimate_df)
 
-    `>> from ghlearn.preprocessing import load_data, preprocess, transform`
-
-    `>> weather_df = load_data(path_to_weather_file)`
-
-    `>> ghclimate_df = load_data(path_to_ghclimate_file)`
-
-    `>> weather_df = preprocess(weather_df)`
-
-    `>> ghclimate_df = preprocess(ghclimate_df)`
-
-    `>> final_df = transform(weather_df, ghclimate_df)`
-
-    NOTE: we make a predicition on aur temperature below.
-
-    `>> X_train, Y_train, X_test, Y_test = train_test_split(final_df, predict_on='Tair')`
-
-    `>> model = GreenHousePredictor()`
-
-    `>> model.train(X_train, Y_train`
+        >> X_train, Y_train, X_test, Y_test = train_test_split(final_df, predict_on='Tair')
+        >> model = GreenHousePredictor()
+        >> model.train(X_train, Y_train
+    ```
 
 - ## Test on a new dataset
-    
-    `>> from ghlearn.preprocessing import load_data, preprocess`
-    
-    `>> from ghlearn.model import GreenHousePredictor`
+    ```shell
+        >> from ghlearn.preprocessing import load_data, preprocess
+        >> from ghlearn.model import GreenHousePredictor
+        >> from ghlearn.plot import forecast_plot
 
-    `>> from ghlearn.plot import forecast_plot`
+        >> model = GreenHousePredictor()
 
-    `>> model = GreenHousePredictor()`
+        >> weather_df = load_data(path_to_weather_file)
+        >> weather_df = preprocess(weather_df)
 
-    `>> weather_df = load_data(path_to_weather_file)`
-
-    `>> weather_df = preprocess(weather_df)`
-
-    `>> y_pred = model.predict(weather_df)`
-
-    `>> forecast_plot(path_to_file_to_save_the_image)`
- 
+        >> y_pred = model.predict(weather_df)
+        >> forecast_plot(path_to_file_to_save_the_image)
+    ```
 
 NOTE: This package will only work with files which have the same format as the example files provided for this task. 
